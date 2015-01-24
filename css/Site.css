@@ -1,0 +1,844 @@
+﻿/*--------------------------- MAIN CONTENT ------------------------------*/
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    padding-top: 50px;
+    font-size: 15px;
+    color: #333;
+    line-height: 1.5em;
+    letter-spacing: 0px;
+}
+
+h1 {
+    text-transform: uppercase;
+    color: #0d163b;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+h4 {
+    color: #b64906;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+a, active:focus, a:active {
+    color: #c96c33;
+    text-decoration: underline;
+    outline: none;
+}
+
+    a:hover {
+        color: #c96c33;
+        text-decoration: none;
+    }
+
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-bottom: 136px; /* Height of the footer element */
+}
+
+#map-canvas {
+    width: 99.8%;
+    height: 710px;
+    border: 1px solid #000;
+}
+
+#wrapper {
+    min-height: 100%;
+    position: relative;
+    padding-top: 35px;
+}
+
+.box {
+    position: relative;
+}
+
+    .box:hover {
+        cursor: pointer;
+    }
+
+#header {
+    background: #0E163B;
+    min-height: 95px;
+    letter-spacing: 1px;
+}
+
+.box-padding {
+    padding: 5px 25px 10px 30px;
+}
+
+footer {
+    width: 100%;
+    min-height: 80px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #0f1a31;
+    background: -moz-linear-gradient(top, #0f1a31 0%, #060912 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0f1a31), color-stop(100%,#060912));
+    background: -webkit-linear-gradient(top, #0f1a31 0%, #060912 100%);
+    background: -o-linear-gradient(top, #0f1a31 0%, #060912 100%);
+    background: -ms-linear-gradient(top, #0f1a31 0%, #060912 100%);
+    background: linear-gradient(to bottom, #0f1a31 0%, #060912 100%);
+    color: #fff;
+    font-size: .7em;
+    letter-spacing: 1px;
+}
+
+ul#lowermenu {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+    ul#lowermenu li {
+        display: inline;
+        font-size: 12px;
+        white-space: nowrap;
+        background-image: none;
+        margin: 0px;
+        list-style: none;
+    }
+
+    ul#lowermenu a {
+        padding: 0 0 3px 0;
+        margin: 0 20px 5px 0;
+        background: transparent;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    ul#lowermenu li a:hover {
+        text-decoration: underline;
+    }
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+.icons-ul {
+    height: 25px;
+    list-style: none outside none;
+    margin: 0;
+    padding: 20px 0 40px 0;
+}
+
+    .icons-ul li {
+        float: left;
+        margin: 0px 3px;
+        list-style: none;
+        padding-top: 0;
+    }
+
+        .icons-ul li img:hover {
+            opacity: 0.9;
+        }
+
+
+@media (min-width: 1200px) {
+    .container {
+        min-width: 1080px;
+        max-width: 1080px;
+    }
+}
+
+@media (max-width: 992px) {
+
+    #wrapper {
+        padding-top: 0px;
+        margin-top: -8px;
+    }
+
+    #header {
+        background: #0E163B;
+        min-height: 50px;
+        letter-spacing: 1px;
+    }
+}
+
+ @media (max-width: 765px) {
+        .body-content {
+    padding-bottom: 200px; /* Height of the footer element */
+}
+}
+
+/*--------------------------- FORMS ------------------------------*/
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.checkbox {
+    display: block;
+    min-height: 20px;
+    padding-left: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    vertical-align: middle;
+}
+
+.radio {
+    display: block;
+    min-height: 20px;
+    padding-left: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    vertical-align: middle;
+}
+
+    .radio label {
+        display: inline-block;
+        cursor: pointer;
+        position: relative;
+        padding-left: 25px;
+        margin-right: 15px;
+    }
+
+    .radio input[type=radio] {
+        display: none;
+    }
+
+    .radio label:before {
+        content: "";
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        margin-right: 10px;
+        margin-top: 2px;
+        position: absolute;
+        left: 0;
+        bottombottom: 1px;
+        background-color: #fff;
+        border: 1px solid #c96c33;
+    }
+
+    .radio label:before {
+        border-radius: 8px;
+    }
+
+    .radio input[type=radio]:checked + label:before {
+        content: "\2022";
+        color: #c96c33;
+        font-size: 32px;
+        text-align: center;
+        line-height: 15px;
+    }
+
+.checkbox input[type="checkbox"] {
+    display: none;
+}
+
+    .checkbox input[type="checkbox"] + label span {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        margin: -1px 11px 0px 0px;
+        vertical-align: middle;
+        border: 2px solid #f17f39;
+        cursor: pointer;
+    }
+
+    .checkbox input[type="checkbox"]:checked + label span {
+        background: url(../Images/icons/checked.png) -2px top no-repeat;
+        width: 27px;
+        height: 28px;
+        border: none;
+        margin-top: -12px;
+        margin-right: 0px;
+    }
+
+.terms input[type="checkbox"] + label span {
+    float: right;
+    margin-left: 15px;
+    margin-top: 3px;
+}
+
+.terms input[type="checkbox"]:checked + label span {
+    float: right;
+    margin-top: -8px;
+    margin-left: 15px;
+}
+
+/*--------------------------- BUTTONS ------------------------------*/
+
+.btn {
+    border-radius: 3px;
+}
+
+.btn-primary {
+    color: #4879A6;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #7CC7FC;
+    border-color: #72ADE4;
+    text-decoration: none;
+    padding: 8px 10px;
+}
+
+    .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
+        color: #4879A6;
+        background-color: #92C0E1;
+        border-color: #72ADE4;
+        text-decoration: none;
+    }
+
+    .btn-primary .fa-lg {
+        line-height: 0.54em;
+    }
+
+.orange-btn {
+    padding: 3px 7px;
+    margin-bottom: 0;
+    font-size: 14px;
+    height: 30px;
+    margin-top: 3px;
+    border: 1px solid #f17f39;
+    border-radius: 0;
+    background: #f17f39;
+    background: -moz-linear-gradient(top, #f17f39 0%, #c96c33 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f17f39), color-stop(100%,#c96c33));
+    background: -webkit-linear-gradient(top, #f17f39 0%, #c96c33 100%);
+    background: -o-linear-gradient(top, #f17f39 0%, #c96c33 100%);
+    background: -ms-linear-gradient(top, #f17f39 0%, #c96c33 100%);
+    background: linear-gradient(to bottom, #0f17f39 0%, #c96c33 100%);
+    color: #fff;
+}
+
+    .orange-btn:active, .orange-btn:focus {
+        background-image: none;
+        outline: 0;
+        background: #f17f39;
+        background: -moz-linear-gradient(top, #f17f39 0%, #c96c33 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f17f39), color-stop(100%,#c96c33));
+        background: -webkit-linear-gradient(top, #f17f39 0%, #c96c33 100%);
+        background: -o-linear-gradient(top, #f17f39 0%, #c96c33 100%);
+        background: -ms-linear-gradient(top, #f17f39 0%, #c96c33 100%);
+        background: linear-gradient(to bottom, #0f17f39 0%, #c96c33 100%);
+        color: #fff;
+    }
+
+    .orange-btn:hover {
+        opacity: 0.9;
+        color: #fff;
+    }
+
+.questionmark-btn, .questionmark-btn:active {
+    width: 25px;
+    height: 25px;
+    background: url(../Images/icons/step-2.png) no-repeat;
+    margin-top: 6px;
+    margin-left: -24px;
+}
+
+.form-control {
+    margin-top: 3px;
+    height: 30px;
+    padding: 3px 3px;
+    border-radius: 0;
+    min-width: 200px;
+    max-width: 240px;
+}
+
+/*--------------------------- HEADER, NAV ------------------------------*/
+
+#header .nav li {
+    padding-top: 35px;
+}
+
+    #header .nav li a {
+        text-transform: uppercase;
+        color: #ffffff;
+        text-decoration: none;
+        border-bottom: 1px solid #0D173B;
+        padding: 0 0 3px 0;
+        margin: 0 38px 5px 0;
+        display: block;
+        background: transparent;
+    }
+
+        #header .nav li a:hover {
+            text-transform: uppercase;
+            color: #ffffff;
+            text-decoration: none;
+            border-bottom: 1px solid #fc6a10;
+        }
+
+.navbar-brand {
+    display: none;
+}
+
+.picture-div {
+    height: 250px;
+    background-image: url(../Images/bgHeader.png);
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-position-y: 50%;
+    border-bottom: 1px solid #a9958d;
+}
+
+    .picture-div img {
+        position: absolute;
+        z-index: 10000;
+        top: -40px;
+        right: 160px;
+    }
+
+#header-icons {
+    width: auto;
+    float: right;
+    padding-top: 15px;
+}
+
+@media (max-width: 992px) {
+    .picture-div {
+        height: 10px;
+        background-image: none;
+    }
+
+        .picture-div img {
+            display: none;
+        }  
+}
+
+@media (max-width: 768px)
+{
+     .navbar-inverse .navbar-toggle .icon-bar {
+background-color: #fc6a10;
+}
+    .navbar-nav {
+margin: 7.5px 15px;
+}
+    #header .nav li {
+padding-top: 10px;
+}
+    #header .nav li a {
+        border-bottom: 1px solid #363636;
+    }
+
+    #header-icons {
+padding-top: 0px;
+}
+}
+
+/*--------------------------- HOME ------------------------------*/
+
+#home {
+    color: #0d163b;
+}
+
+    #home h1 {
+        margin: .5em 1em 0 0;
+        padding: 16px 0;
+        padding-bottom: .5em;
+        font-weight: bold;
+        font-size: 25px;
+        color: #fff;
+    }
+
+    #home h2 {
+        color: #0d163b;
+        font-weight: bold;
+        margin-top: 0;
+        font-size: 24px;
+    }
+
+    #home .box {
+        margin-top: 40px;
+        letter-spacing: 1px;
+    }
+
+        #home .box img:hover {
+            opacity: 0.9;
+        }
+
+.orange-div {
+    background-color: #FD690F;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+    color: #fff;
+}
+
+#renew-div div:last-child {
+    margin-top:-45px;
+}
+
+.blue-column-div {
+    background: #2f6dac;
+    padding: 5px 25px 50px 25px;
+    height: 100%;
+    letter-spacing: 1px;
+}
+
+    .blue-column-div p {
+        letter-spacing: 1px;
+    }
+
+#bluegradient {
+    text-align: center;
+    padding: 10px 25px 20px 25px;
+    background: #65b0fc;
+    background: -moz-linear-gradient(top, #65b0fc 0%, #f6faff 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#65b0fc), color-stop(100%,#f6faff));
+    background: -webkit-linear-gradient(top, #65b0fc 0%,#f6faff 100%);
+    background: -o-linear-gradient(top, #65b0fc 0%,#f6faff 100%);
+    background: -ms-linear-gradient(top, #65b0fc 0%,#f6faff 100%);
+    background: linear-gradient(to bottom, #65b0fc 0%,#f6faff 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#65b0fc', endColorstr='#f6faff',GradientType=0 );
+}
+
+    #bluegradient img {
+        margin: 10px 0;
+        width: 100%;
+        border: 8px solid #fbd9af;
+        -moz-border-radius: 6px;
+        border-radius: 6px;
+        display:block;
+    }
+
+#instructions {
+    font-size: 13px;
+    color: #fff;
+    line-height: 1.3em;
+    letter-spacing: .1px;
+    text-align: center;
+}
+
+@media (max-width: 992px) {
+     #home {
+margin-top: 29px;
+}
+    #home .container {
+        padding:0;
+        max-width:100%;
+    }
+
+    .orange-div {
+    padding-bottom:15px;
+}
+
+    .blue-column-div {
+border-bottom: 5px solid #fff;
+}
+
+    #home #bluegradient img {
+        margin: 10px 10px;
+        width: 265px;
+        display:inline-block;
+    }
+     #renew-div .col-md-6 {
+    width: 35%;
+float: left;
+text-align: left;
+}
+    .map #map-canvas {
+        height:250px;
+    }
+}
+
+@media (max-width: 768px)
+{
+     #home {
+margin-top: 0px;
+}
+
+     #renew-div .col-md-6 {
+    width: 100%;
+float: none;
+text-align: left;
+}
+      #home #bluegradient img {
+        width: 100%;
+    }
+     #renew-div div:last-child {
+    margin-top:15px;
+}
+    #instructions {
+         display:none;
+    }
+
+    .img-instructions-div {
+        display:none;
+    }
+}
+
+/*--------------------------- STEPS ------------------------------*/
+
+.layout-renewal {
+    margin-top:15px;
+}
+
+#inner-header .navbar-brand {
+    background:url(../Images/LOGO.png) no-repeat;
+    display:block;
+    width: 220px;
+height: 75px;
+margin: 15px 0px 0px 0px;
+margin-right:20%;
+}
+
+@media (min-width: 1200px) {
+
+#inner-header .navbar-nav {
+margin-left: 25%;
+}
+#inner-header .navbar-brand {
+        display:block;
+    }
+}
+
+@media (max-width: 1200px) {
+
+#inner-header .navbar-nav {
+margin-left: 0;
+}
+    #inner-header .navbar-brand {
+        display:none;
+    }
+
+}
+
+#steps h1 {
+    font-size: 30px;
+    margin: 0.67em 0;
+}
+
+#steps h2 {
+    font-size: 25px;
+    margin: 0.67em 0;
+    color: #b64906;
+    font-weight: bold;
+    margin-top: 40px;
+}
+
+#steps h3 {
+    font-weight: bold;
+    margin-top: 50px;
+}
+
+#steps table {
+    letter-spacing: 0px;
+    margin-top: 10px;
+}
+
+    #steps table td:first-child {
+        padding-right: 10px;
+        vertical-align: top;
+    }
+
+    #steps table .name {
+        padding-right: 10px;
+        vertical-align: top;
+        font-weight: bold;
+        width: 250px;
+    }
+
+#steps .form-group {
+    margin-bottom: 5px;
+}
+
+    #steps .form-group .col-md-4 {
+        width: 31.033333%;
+    }
+
+    #steps .form-group div:last-child {
+        padding-left: 30px;
+    }
+
+    #steps .form-group div, #steps .form-group p {
+        padding-right: 0;
+    }
+
+#steps .next-step-btn {
+    padding: 6px 25px;
+    font-size: 20px;
+    border: 1px solid #222f65;
+    background: #222f65;
+    background: -moz-linear-gradient(top, #222f65 0%, #101a42 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#222f65), color-stop(100%,#101a42));
+    background: -webkit-linear-gradient(top, #222f65 0%, #101a42 100%);
+    background: -o-linear-gradient(top, #222f65 0%, #101a42 100%);
+    background: -ms-linear-gradient(top, #222f65 0%, #101a42 100%);
+    background: linear-gradient(to bottom, #222f65 0%, #101a42 100%);
+    color: #fff;
+}
+
+    #steps .next-step-btn:hover {
+        opacity: 0.9;
+    }
+
+#steps .box p {
+    padding-left: 50px;
+}
+
+#steps .box img {
+    position: absolute;
+    width: 35px;
+}
+
+.orange-box {
+    background-color: #ffeee4;
+    border: 1px solid #ffccad;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.orange-box1 {
+    background-color: #ffe9db;
+    border: 4px solid #ffbd95;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.gray-box {
+    background-color: #f3f3f3;
+    border: 4px solid #d0d0d0;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.orange-form, .orange-form[disabled] {
+    background-color: #ffdcc6;
+    border: 1px solid #ffb98e;
+    color: #000;
+}
+
+    .orange-form::-webkit-input-placeholder { /* WebKit browsers */
+        color: #000;
+    }
+
+    .orange-form:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+        color: #000;
+        opacity: 1;
+    }
+
+    .orange-form::-moz-placeholder { /* Mozilla Firefox 19+ */
+        color: #000;
+        opacity: 1;
+    }
+
+    .orange-form:-ms-input-placeholder { /* Internet Explorer 10+ */
+        color: #000;
+    }
+
+#steps .pagination-div {
+    text-align: center;
+    background-color: #d7d7d7;
+    height: 33px;
+    margin-bottom: 40px;
+}
+
+#steps .pagination {
+    display: inline-block;
+    padding-left: 0;
+    margin: 0px 0;
+    border-radius: 0px;
+}
+
+    #steps .pagination > li > a, .pagination > li > span {
+        padding: 6px 12px;
+        margin-left: -1px;
+        line-height: 1.428571429;
+        text-decoration: none;
+        background-color: #d7d7d7;
+        border: none;
+        color: #000;
+    }
+
+    #steps .md-5-textarea {
+            padding-left: 15px;
+        }
+
+    #steps .submit-div div:last-child {
+        text-align:right;
+}
+
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+    z-index: 2;
+    color: #0d163b;
+    cursor: default;
+    background-color: #d7d7d7;
+    border-color: #d7d7d7;
+    font-weight: bold;
+}
+
+.step-form .control-label {
+    text-align: left;
+}
+
+.step-form span {
+    color: #ff0000;
+}
+
+.step-form .col-md-2 {
+    width: 13.266667%;
+}
+
+.step-form h4 {
+    margin: 0;
+}
+
+.validation-summary-errors {
+    background-color: #FFE0E0;
+    border: 1px solid #900000;
+    padding: 20px;
+    margin-bottom: 20px;
+    color: #900000;
+}
+
+    .validation-summary-errors ul {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-left: 20px;
+    }
+
+    @media (max-width: 992px) {
+        #steps {
+            margin-top: 39px;
+        }
+
+        #steps .map {
+            margin-bottom: 15px;
+        }
+}
+
+    @media (max-width: 765px) {
+        #steps {
+            margin-top: 0px;
+        }
+
+        #steps .submit-div div:last-child {
+        text-align:left;
+        margin-top:20px;
+}
+
+        .step-form .col-md-2 {
+width: inherit;
+}
+        .questionmark-btn, .questionmark-btn:active {
+display:none;
+}
+        #steps .md-5-textarea {
+            padding-left: 30px;
+        }
+}

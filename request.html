@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BC Autorenew - Home</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="font-awesome-4.2.0/css/font-awesome.min.css">
+    <link href="css/site.css" rel="stylesheet">
+    <link href="css/request.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="wrapper">
+
+        <div id="header" class="navbar navbar-inverse navbar-fixed-top">
+            <div id="request-header" class="container">
+                <div class="row">
+                   <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand login" href="/"></a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><button type="submit" class="btn request-btn">Request queue</button>
+                        </li>
+                        <li><div class="form-group">
+                                <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Find Request">
+                                <span class="input-group-btn">
+        <button class="btn" type="button"><i class="fa fa-search"></i></button>
+      </span>
+                            </div>
+                        </li>
+                        <li><button type="submit" class="btn logout-btn"><i class="fa fa-user fa-lg"></i>&nbsp;Log Out</button>
+                        </li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+        </div>
+        <!-- header end -->
+        <div class="orange-div">
+            <div class="container">
+                <h1>Broker Log in</h1>
+            </div>
+        </div>
+        <!-- orange-div end -->
+
+        <div class="body-content">
+            <div id="request-filter">
+
+                <div class="container">
+                    <div class="filter">
+                       <div class="row">
+                        <div class="col-md-6 clearfix">
+                            <form class="form-inline">
+                                <div class="form-group">
+                                    <label for="">Show Requests for Broker:</label>
+                                    <select class="form-control">
+  <option>All Brokers</option>
+  <option>2</option>
+  <option>3</option>
+  <option>4</option>
+  <option>5</option>
+</select>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-md-6 text-right">
+                            <form class="form-inline">
+                                <div class="form-group">
+                                    <label for="">Show Requests in date range:</label>
+                                    <select class="form-control">
+  <option>Last 3 days</option>
+  <option>2</option>
+  <option>3</option>
+  <option>4</option>
+  <option>5</option>
+</select>
+                                </div>
+                            </form>
+                        </div>
+                        </div>
+                        <!-- row end -->
+                        <div class="row">
+                        <div class="col-md-6 clearfix"></div>
+                        <div class="col-md-6 text-right">
+                            <form class="form-inline">
+                                <div class="form-group">
+                                    <label class="label-refresh" for="">List as of Aug 27, 2014 at 02:45 PM</label>
+                                    <button class="btn btn-refresh" type="submit">Refresh List</button>
+                                </div>
+                            </form>
+                        </div>
+                        </div>
+                        <!-- row end -->
+                    </div>
+                    <!-- filter end -->
+                    <div class="row">
+                        <ul class="nav nav-tabs">
+  <li role="presentation" class="active"><a href="#">All Requests</a></li>
+  <li role="presentation"><a href="#">Incomplete</a></li>
+  <li role="presentation"><a href="#">Completed</a></li>
+  <li role="presentation"><a href="#">Cancelled/Rejected</a></li>
+</ul>
+                   <div class="results-div">
+                       <p class="text-center"><i class="fa fa-search fa-5x"></i></p>
+                       <h1 class="text-center">No Requests found
+</h1>
+                   </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- id request end -->
+        </div>
+        <!-- body-content end -->
+
+        <footer>
+            <div class="container text-center">
+               <br/>
+                <p>© 2015 Broker Link Software Inc.</p>
+                <ul id="lowermenu">
+                    </li>
+                    <li><a href="/Home/Privacy">PRIVACY POLICY</a>
+                    </li>
+                    <li><a href="/Home/Sitemap">TERMS OF USE</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+        <!-- footer end -->
+    </div>
+    <!-- wrapper end -->
+
+    <script src="js/jquery-1.10.2.js"></script>
+
+    <script src="js/bootstrap.js"></script>
+</body>
+
+
+</html>
